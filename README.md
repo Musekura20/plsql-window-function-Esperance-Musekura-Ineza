@@ -71,7 +71,7 @@ I have created 3 tables with relationships:
 -Query file:
 ![3 months moving averages](Querries/3_months_moving_averages.sql.txt)
 -Screnshot:
-![3 months moving average](3_months_moving_average.png)
+![3 months moving average](Screenshots/3_months_moving_average.png)
 -**Interpretation:**This shows the average sales of 3 months in a certain quarter ,also shows some highs and lows in monthly sales and later make the overall average.
 ---
 
