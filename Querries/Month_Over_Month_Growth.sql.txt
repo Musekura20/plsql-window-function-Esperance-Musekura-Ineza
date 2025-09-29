@@ -1,0 +1,9 @@
+--Month-Over-Month Growth trends --
+
+SELECT TO_CHAR(t.sale_date, 'YYYY-MM') AS month, SUM(t.amount) AS monthly_sales,
+LAG(SUM(t.amount)) OVER (ORDER BY TO_CHAR(t.sale_date, 'YYYY-MM')) AS prev_month_sales,
+LEAD(SUM(t.amount)) OVER (ORDER BY TO_CHAR(t.sale_date, 'YYYY-MM')) AS next_month_sales,
+
+-- let's find growth percentage --
+ROUND(((SUM(t.amount) - LAG(SUM(t.amount)) OVER (ORDER BY TO_CHAR(t.sale_date, 'YYYY-MM')))/ NULLIF(LAG(SUM(t.amount)) OVER (ORDER BY TO_CHAR(t.sale_date, 'YYYY-MM')), 0)) * 100, 2) AS growth_percent
+FROM transactions t group by TO_CHAR(t.sale_date, 'YYYY-MM') order by month;

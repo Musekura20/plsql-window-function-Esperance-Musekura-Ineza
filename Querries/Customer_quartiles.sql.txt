@@ -1,0 +1,2 @@
+--Customers spending patterns--
+SELECT t.customer_id, SUM(t.amount) AS total_spent, NTILE(4) OVER (ORDER BY SUM(t.amount) DESC) AS spending_quartile, CUME_DIST() OVER (ORDER BY SUM(t.amount) DESC) AS percentile_rank from transactions t GROUP BY t.customer_id order by total_spent desc;

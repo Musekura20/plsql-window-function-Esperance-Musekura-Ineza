@@ -1,0 +1,6 @@
+--Find running total sales amount!
+Select TO_CHAR(t.sale_date, 'YYYY-MM') as month, SUM(t.amount) as monthly_sales,             
+MIN(SUM(t.amount)) OVER (order by TO_CHAR(t.sale_date, 'YYYY-MM')) as min_monthly_sales,
+MAX(SUM(t.amount)) OVER (order by TO_CHAR(t.sale_date, 'YYYY-MM')) as max_monthly_sales,
+SUM(SUM(t.amount)) OVER (order by TO_CHAR(t.sale_date, 'YYYY-MM')) as running_total
+FROM transactions t group by TO_CHAR(t.sale_date, 'YYYY-MM') order by month;
