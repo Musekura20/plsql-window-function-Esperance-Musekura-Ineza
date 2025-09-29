@@ -67,9 +67,9 @@ I have created 3 tables with relationships:
 -**Interpretation:** This shows how different customers spend by dividing them into 4 categories where the top spenders are in quartile 1 and the least in fourth quartile.
 ---
 
-### 4.5 3 months moving averages
+### 4.5. 3 months moving averages
 -Query file:
-![ 3 months moving averages](3_months_moving_averages.sql.txt)
+![3 months moving averages](Querries/3_months_moving_averages.sql.txt)
 -Screnshot:
 ![3 months moving average](3_months_moving_average.png)
 -**Interpretation:**This shows the average sales of 3 months in a certain quarter ,also shows some highs and lows in monthly sales and later make the overall average.
