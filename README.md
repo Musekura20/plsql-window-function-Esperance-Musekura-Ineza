@@ -26,8 +26,9 @@ IME_supermarket will focus on 5 main measurable goals:
 ---
 ## 3. Database Schema
 I have created 3 tables with relationships:
--**Customer: customer_id, name, region.  
-- **Products**: product_id, product_name, category. 
+-**Customer:** customer_id, name, region.  
+-**Products:** product_id, product_name, category
+-**Transactions:** transaction_id, customer_id, product_id, sales_date, amount
 **Sample functions:**
 ![Sample functions](Create_Table_and_Insert_Values.sql.txt) 
 **ER Diagram:**
